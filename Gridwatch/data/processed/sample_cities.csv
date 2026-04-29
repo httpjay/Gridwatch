@@ -1,0 +1,11 @@
+city,state,energy_burden,household_income,avg_annual_energy_cost,risk_label
+Adelanto,California,4.0,78858.0,3215.0,0
+Agoura Hills,California,2.0,256846.0,4563.0,0
+Alameda,California,1.0,172637.0,1522.0,0
+Albany,California,1.0,186562.0,1997.0,0
+Alhambra,California,2.0,110962.0,1900.0,0
+Aliso Viejo,California,1.0,186033.0,2246.0,0
+Alturas,California,4.0,60275.0,2684.0,0
+American Canyon,California,2.0,168561.0,3146.0,0
+Anaheim,California,1.0,120260.0,1657.0,0
+Anderson,California,4.0,72223.0,2741.0,0

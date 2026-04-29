@@ -1,0 +1,94 @@
+Program: CARE and FERA Utility Discount Programs — California (PG&E)
+
+OVERVIEW
+CARE (California Alternate Rates for Energy) and FERA (Family Electric Rate Assistance) are utility discount programs funded by California utility customers and administered under the California Public Utilities Commission (CPUC). This document reflects PG&E program guidelines valid through May 31, 2026.
+
+CARE PROGRAM
+
+What it provides:
+- Monthly discount on electricity and gas bills for qualifying households
+- Discount appears on the first page of your next PG&E bill after enrollment
+
+Who qualifies — TWO ways to qualify:
+
+Option A: Public assistance program enrollment
+Automatically qualify if any household member receives any of:
+- Low Income Home Energy Assistance Program (LIHEAP)
+- Women, Infants, and Children (WIC)
+- CalFresh / SNAP (Food Stamps)
+- CalWORKs (TANF) or Tribal TANF
+- Bureau of Indian Affairs General Assistance
+- Head Start Income Eligible (Tribal only)
+- Medicaid / Medi-Cal (under age 65)
+- Medi-Cal for Families (Healthy Families A&B)
+- National School Lunch Program (NSLP)
+- Supplemental Security Income (SSI)
+- Medicaid / Medi-Cal (age 65 and over)
+
+Option B: Household income limits (valid through May 31, 2026)
+Household Size | CARE Maximum Annual Income
+1-2 people     | $42,300 or less
+3 people        | $53,300 or less
+4 people        | $64,300 or less
+5 people        | $75,300 or less
+6 people        | $86,300 or less
+7 people        | $97,300 or less
+8 people        | $108,300 or less
+Each additional person: add $11,000
+
+Additional CARE requirements:
+- Monthly electric usage must not exceed six times the Tier 1 allowance
+- Cannot be claimed as a dependent on another person's tax return (except spouse)
+- Cannot share an energy meter with another home
+- Must renew eligibility at least every two years
+
+FERA PROGRAM
+
+What it provides:
+- Monthly discount on electricity bills only (no gas discount)
+- For households with income slightly above CARE limits
+
+Who qualifies — income limits (valid through May 31, 2026):
+Household Size | FERA Income Range (Annual)
+1-2 people     | $42,301 – $52,875
+3 people        | $53,301 – $66,625
+4 people        | $64,301 – $80,375
+5 people        | $75,301 – $94,125
+6 people        | $86,301 – $107,875
+7 people        | $97,301 – $121,625
+8 people        | $108,301 – $135,375
+Each additional person: add $11,000 – $13,750
+
+Note: FERA requires a household of at least 3 people. Households of 1-2 people do not qualify for FERA.
+
+CARE vs FERA — Which applies:
+- Income below CARE limit → Apply for CARE (larger discount)
+- Income above CARE but below FERA limit → Apply for FERA
+- Income above FERA limit → May qualify for ESA or WAP instead
+
+INCOME DEFINITION
+Total gross annual household income includes ALL taxable and non-taxable income from ALL people living in the home, including: wages, salaries, interest, dividends, spousal and child support, public assistance, Social Security, pensions, housing and military subsidies, rental income, self-employment income, and all employment-related non-cash income.
+
+RENTER ELIGIBILITY
+Both homeowners and renters qualify. Address must be primary residence. P.O. Box addresses are not accepted.
+
+HOW TO APPLY (PG&E customers)
+- Online: pge.com/care (fastest enrollment)
+- Phone: 1-866-743-2273 (CARE) or 1-800-743-5000 (FERA)
+- Email: CAREandFERA@pge.com (scan or photo of completed application)
+- Fax: 1-877-302-7563
+- Mail: CARE/FERA Program, P.O. Box 29647, Oakland, CA 94604-7563
+- TTY: 711 or 1-800-735-2929
+Languages supported: English, Spanish, Vietnamese, Mandarin, Cantonese, Russian, Korean, Tagalog, Hmong
+
+RELATED PROGRAMS
+If you do not qualify for CARE or FERA, consider:
+- Energy Savings Assistance Program (ESA): free home efficiency upgrades — pge.com/energysavings
+- LIHEAP: bill payment assistance — 1-866-675-6623
+- Medical Baseline: extra energy at lowest price for medical equipment users
+- Budget Billing: averaged monthly payments to avoid bill spikes
+
+RELEVANCE TO HIGH-RISK CITIES
+CARE and FERA have higher income thresholds than LIHEAP, making them accessible to a broader population. For GridWatch cities like Adelanto (median household income $78,858), a family of 4 earning $64,300 or less qualifies for CARE, while a family of 4 earning up to $80,375 qualifies for FERA. Unlike LIHEAP which is one-time assistance, CARE/FERA provide permanent monthly bill reductions — making them the most impactful ongoing program for high energy burden households.
+
+Source: PG&E CARE/FERA Program Application Form 79-1051, valid through May 31, 2026. California Public Utilities Commission (CPUC).

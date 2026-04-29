@@ -1,0 +1,95 @@
+Program: Energy Savings Assistance (ESA) Program — California
+
+OVERVIEW
+The Energy Savings Assistance (ESA) Program provides no-cost energy-efficient home improvements and appliances to income-qualified households in California. It is funded by California utility customers and administered by investor-owned utilities: PG&E, Southern California Edison (SCE), SDG&E, and SoCalGas, under the California Public Utilities Commission (CPUC).
+
+WHAT ESA PROVIDES — ALL AT NO COST
+Basic services (all eligible households):
+- LED light bulb replacement
+- Smart power strips
+- Energy education from a certified specialist
+
+Appliance upgrades (based on home assessment):
+- Refrigerator replacement (must be at least 15 years old)
+- Clothes washer replacement
+- Dishwasher replacement
+- Freezer replacement
+- Heat pump water heater installation
+- Cooling system replacement or repair
+
+Weatherization services:
+- Attic, wall, and floor insulation
+- Air sealing (gaps, cracks, ducts)
+- Weatherstripping on doors and windows
+- Duct sealing and repair
+
+Health and safety:
+- Furnace repair or replacement (homeowners, if inoperable or unsafe)
+- Carbon monoxide and smoke detector installation
+- Ventilation improvements
+
+All equipment AND installation costs are covered. Work is done by SCE/PG&E approved certified contractors.
+
+ELIGIBILITY — TWO WAYS TO QUALIFY
+
+Option A: Public assistance program enrollment
+Automatically qualify if any household member participates in:
+- LIHEAP
+- Medi-Cal / Medicaid
+- Medi-Cal for Families (Healthy Families A&B)
+- CalFresh / SNAP (Food Stamps)
+- CalWORKs (TANF) / Tribal TANF
+- Supplemental Security Income (SSI)
+- Women, Infants, and Children (WIC)
+- Head Start Income Eligible (Tribal only)
+- Bureau of Indian Affairs General Assistance
+
+Option B: Income limits (SCE — effective July 1, 2025 to May 31, 2026)
+Household Size | Maximum Annual Income
+1 person        | $39,125
+2 people        | $52,875
+3 people        | $66,625
+4 people        | $80,375
+5 people        | $94,125
+6 people        | $107,875
+7 people        | $121,675
+8 people        | $135,375
+Each additional person: add $13,750
+
+Income limits are set at 250% of the Federal Poverty Guidelines (CPUC standard).
+Income includes all gross annual income from all household members.
+
+RENTER vs HOMEOWNER ELIGIBILITY
+- Both homeowners and renters qualify
+- Renters can receive appliance upgrades without landlord approval
+- Weatherization improvements (insulation, sealing) require landlord permission for renters
+- Multifamily properties: deed-restricted properties need 65% of tenants to be income-qualified; non-deed-restricted need 80%
+
+HOW TO APPLY
+PG&E customers:
+- Online: pge.com/energysavings (requires My Account login)
+- Phone: 1-800-933-9555
+
+SCE customers:
+- Online: sce.com (requires MyAccount login)
+- Phone: 1-800-736-4777, Monday–Friday 8am–6pm
+
+Process after applying:
+1. Home energy audit conducted by certified ESA contractor
+2. Contractor identifies which upgrades your home qualifies for
+3. Installation scheduled — all work done at no cost
+4. Inspection may be performed to verify quality
+5. Processing time: approximately 4-8 weeks
+
+WHAT TO EXPECT FROM CONTRACTORS
+ESA contractors wear royal blue shirts with the ESA logo. All contractors carry a photo badge with name, company, ID number, and expiration date. If unsure, call your utility to verify contractor identity before allowing entry.
+
+ESA vs WAP — KEY DIFFERENCE
+- ESA is utility-funded — lighter upgrades, faster process
+- WAP (Weatherization Assistance Program) is federally funded — deeper retrofits, average investment $5,000-$6,500 per home
+- Households can benefit from BOTH programs
+
+RELEVANCE TO HIGH-RISK CITIES
+ESA is especially impactful for GridWatch cities where temperature forecasts (min_temp_forecast, avg_temp_forecast) are top SHAP risk drivers. High temperature sensitivity indicates inefficient housing — exactly what ESA targets through insulation and appliance upgrades. For Adelanto, where min_temp_forecast (0.1873) is the second strongest SHAP driver after household income, ESA weatherization directly addresses the structural cause of energy burden. Unlike LIHEAP bill assistance, ESA provides permanent improvements that reduce energy costs long-term.
+
+Source: Southern California Edison ESA Program (sce.com), 211 Ventura County ESA documentation. Income limits effective July 1, 2025 – May 31, 2026. CPUC ESA Program Guidelines 2021-2026 Cycle.

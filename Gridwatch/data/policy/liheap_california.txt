@@ -1,0 +1,75 @@
+Program: Low Income Home Energy Assistance Program (LIHEAP) — California
+
+OVERVIEW
+LIHEAP provides financial assistance to income-qualified households in California to help pay heating and cooling energy costs. The program targets households that spend a disproportionate share of their income on energy bills and may face difficulty maintaining safe indoor temperatures.
+
+ELIGIBILITY — INCOME LIMITS (California, 4-Person Household)
+The following are the maximum gross annual income limits for a 4-person household to qualify in California:
+
+- 2024: $66,527
+- 2023: $62,313
+- 2022: $59,186
+- 2021: $56,102
+- 2020: $53,006
+- 2019: $50,094
+
+Income limits vary by household size. Households at or below these thresholds may qualify for heating, cooling, or crisis assistance. Households below 100% of the federal poverty level are prioritized.
+
+BENEFIT AMOUNTS (California Averages)
+Heating Assistance:
+- 2024 average: $513 per household
+- 2023 average: $460 per household
+- 2022 average: $446 per household
+- 2021 average: $402 per household
+
+Cooling Assistance:
+- 2024 average: $506 per household
+- 2023 average: $440 per household
+- 2022 average: $434 per household
+
+Crisis/Emergency Assistance (Year-Round):
+- 2024 average: $1,145 per household
+- 2023 average: $1,183 per household
+- 2022 average: $863 per household
+- 2021 average: $736 per household
+
+Other Crisis Assistance:
+- 2024 average: $4,002 per household
+
+CRISIS INTERVENTION
+LIHEAP provides emergency crisis assistance for households facing immediate utility shutoff or unsafe living conditions due to extreme heat or cold. Crisis assistance is available year-round in California and typically provides higher benefit amounts than standard heating/cooling assistance.
+
+ELIGIBLE POPULATION (California, 2024)
+- Total income-eligible households: approximately 3.33 million
+- Households below 100% poverty level: approximately 1.35 million
+- Households with a member aged 60 or over: approximately 1.52 million
+- Households with a member with a disability: approximately 1.19 million
+- Households with a child aged 5 or under: approximately 535,000
+
+PRIORITY GROUPS
+LIHEAP prioritizes assistance for:
+- Households with elderly members (age 60 or over)
+- Households with members with disabilities
+- Households with young children (age 5 or under)
+- Households with the highest energy burden (energy costs as a percentage of income)
+- Households at or below 100% of the federal poverty level
+
+SERVICES PROVIDED
+1. Heating assistance — help paying winter heating bills
+2. Cooling assistance — help paying summer cooling/air conditioning bills
+3. Crisis intervention — emergency help when facing utility shutoff
+4. Weatherization — limited home efficiency improvements to reduce long-term energy costs
+
+RENTER ELIGIBILITY
+Both homeowners and renters are eligible to apply for LIHEAP assistance. Renters who pay their own utility bills directly may apply. Renters whose utilities are included in rent may still qualify if they can demonstrate energy cost burden.
+
+HOW TO APPLY (California)
+- Contact your local Community Services Agency or Community Action Agency
+- Apply through the California Department of Community Services and Development (CSD)
+- Applications are accepted year-round, though funding is limited
+- Required documents typically include: proof of income, utility bill, proof of residence, household size verification
+
+RELEVANCE TO HIGH-RISK CITIES
+Cities flagged as HIGH RISK by GridWatch with high energy burden, low household income, and extreme temperature exposure are strong candidates for LIHEAP outreach. Residents in these cities should be encouraged to apply proactively rather than waiting for a crisis.
+
+Source: LIHEAP Performance Measurement Web Site (liheappm.acf.hhs.gov), California data 2010–2024.

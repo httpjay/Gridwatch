@@ -1,0 +1,51 @@
+city,state,energy_burden,household_income,avg_annual_energy_cost,risk_label
+Adelanto,California,4.0,78858.0,3215.0,1
+Agoura Hills,California,2.0,256846.0,4563.0,0
+Alameda,California,1.0,172637.0,1522.0,0
+Albany,California,1.0,186562.0,1997.0,0
+Alhambra,California,2.0,110962.0,1900.0,0
+Aliso Viejo,California,1.0,186033.0,2246.0,0
+Alturas,California,4.0,60275.0,2684.0,1
+American Canyon,California,2.0,168561.0,3146.0,0
+Anaheim,California,1.0,120260.0,1657.0,0
+Anderson,California,4.0,72223.0,2741.0,1
+Angels,California,4.0,88070.0,3178.0,1
+Antioch,California,2.0,121232.0,2880.0,0
+Apple Valley,California,4.0,89213.0,3271.0,1
+Arcadia,California,2.0,150491.0,2439.0,0
+Arcata,California,3.0,63642.0,2068.0,1
+Arroyo Grande,California,1.0,120932.0,1657.0,0
+Artesia,California,2.0,110973.0,2157.0,0
+Arvin,California,5.0,54244.0,2463.0,1
+Atascadero,California,2.0,125855.0,2307.0,0
+Atherton,California,1.0,443675.0,5054.0,0
+Atwater,California,3.0,84919.0,2455.0,1
+Auburn,California,3.0,107661.0,2879.0,1
+Avalon,California,2.0,113095.0,2349.0,0
+Avenal,California,5.0,57917.0,2723.0,1
+Azusa,California,2.0,103795.0,1787.0,0
+Bakersfield,California,3.0,99042.0,2823.0,1
+Baldwin Park,California,2.0,94937.0,2343.0,0
+Banning,California,3.0,79080.0,2752.0,1
+Barstow,California,4.0,68709.0,2776.0,1
+Beaumont,California,3.0,101139.0,2615.0,1
+Bell,California,2.0,71861.0,1564.0,0
+Bellflower,California,2.0,92255.0,1897.0,0
+Bell Gardens,California,2.0,67671.0,1550.0,0
+Belmont,California,1.0,316327.0,2883.0,0
+Benicia,California,2.0,145986.0,2605.0,0
+Berkeley,California,1.0,166516.0,1939.0,0
+Beverly Hills,California,2.0,216447.0,3440.0,0
+Big Bear Lake,California,3.0,104982.0,2657.0,1
+Bishop,California,4.0,82927.0,3028.0,1
+Blythe,California,4.0,72849.0,2866.0,1
+Brawley,California,3.0,83631.0,2388.0,1
+Brea,California,2.0,145490.0,2400.0,0
+Brentwood,California,2.0,162090.0,3126.0,0
+Brisbane,California,1.0,218771.0,2348.0,0
+Buellton,California,1.0,141790.0,1918.0,0
+Buena Park,California,2.0,131313.0,2050.0,0
+Burbank,California,1.0,127869.0,1568.0,0
+Burbank,California,1.0,160298.0,2204.0,0
+Burlingame,California,1.0,294294.0,3164.0,0
+Calabasas,California,2.0,243113.0,4290.0,0

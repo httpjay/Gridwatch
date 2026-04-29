@@ -1,0 +1,101 @@
+Program: Weatherization Assistance Program (WAP) — California
+
+OVERVIEW
+The Weatherization Assistance Program (WAP) is a federally funded program administered by the U.S. Department of Energy (DOE) and implemented in California by the Department of Community Services and Development (CSD). WAP provides free comprehensive home energy efficiency upgrades to low-income households across all 58 California counties. The program has operated since 1976 and has helped more than 7.2 million families nationally.
+
+WHAT WAP PROVIDES — ALL AT NO COST
+WAP conducts a full computerized home energy audit first, then provides:
+
+Building envelope improvements:
+- Attic, wall, and floor insulation
+- Air sealing (caulking, weatherstripping, gap sealing)
+- Window replacement
+- Door weatherstripping
+
+Heating and cooling systems:
+- Furnace repair or replacement
+- Heating and cooling appliance repairs
+- Duct testing and sealing
+
+Water and plumbing:
+- Water heater blankets
+- Low-flow showerheads
+
+Health and safety:
+- Carbon monoxide testing and mitigation
+- Minor home repairs needed to complete weatherization
+- Energy education and information
+
+Average investment per California home: up to $4,000 in upgrades
+National average annual savings: $372 or more per year
+
+ELIGIBILITY — WHO QUALIFIES
+
+Income limits (California WAP — effective July 1, 2025):
+Household Size | Maximum Monthly Income | Maximum Annual Income
+1 person        | $2,608.33              | $31,300
+2 people        | $3,525.00              | $42,300
+3 people        | $4,441.67              | $53,300
+4 people        | $5,358.33              | $64,300
+5 people        | $6,275.00              | $75,300
+6 people        | $7,191.67              | $86,300
+7 people        | $8,108.33              | $97,300
+8 people        | $9,025.00              | $108,300
+9 people        | $9,941.67              | $119,300
+10 people       | $10,858.33             | $130,300
+Each additional person: add $916.67/month
+
+Source: California CSD, 2025 WAP Income Eligibility Guidelines, effective July 1, 2025.
+Income eligibility is set at 200% of federal poverty guidelines per DOE requirements.
+
+Categorical eligibility — automatically qualify if receiving:
+- LIHEAP (Low Income Home Energy Assistance Program)
+- Supplemental Security Income (SSI)
+- HUD-assisted housing residents
+- USDA means-tested program recipients (at or below 80% Area Median Income)
+
+PRIORITY GROUPS
+WAP gives priority to:
+- Elderly residents (age 60 or older)
+- Persons with disabilities
+- Families with children
+- High residential energy users
+- Households with high energy burden (energy costs as % of income)
+
+RENTER ELIGIBILITY
+Both homeowners and renters qualify. For rentals:
+- Landlord must provide written permission before work begins
+- Landlord cannot raise rent solely because of WAP improvements
+- Tenants must pay their own utility bills directly to benefit (not included in rent)
+- Multifamily buildings may qualify if income eligibility requirements are met
+
+HOW TO APPLY IN CALIFORNIA
+- Contact your local Community Action Agency (CAA) or subgrantee
+- CSD coordinates services in all 58 California counties
+- Find your local agency: csd.ca.gov or energysaver.gov
+- Required documents: proof of income (pay stubs, Social Security statements, bank statements), utility bills, proof of residence, ID
+- Important: Waitlists are common — apply as early as possible
+- Processing time: 2-6 months depending on local agency capacity and demand
+
+THE HOME ENERGY AUDIT PROCESS
+Once accepted:
+1. Energy auditor visits your home
+2. Computerized assessment of energy use conducted
+3. Blower-door test measures air infiltration
+4. All energy equipment and home areas inspected
+5. Recommended scope of work provided
+6. Work crew or contractors complete improvements
+7. Inspector reviews completed work for quality and safety
+
+WAP vs ESA — KEY DIFFERENCE
+Both WAP and ESA provide free weatherization but differ in funding and depth:
+- WAP is federally funded (DOE) — deeper, more comprehensive retrofits, up to $4,000+ per home
+- ESA is utility-funded (SCE, PG&E) — lighter upgrades, faster process
+- WAP income limits are lower than ESA (200% FPL vs 250% FPL)
+- Households may benefit from BOTH programs — WAP for structural improvements, ESA for appliances
+- In California, all 58 counties have WAP services coordinated through CSD subgrantees
+
+RELEVANCE TO HIGH-RISK CITIES
+WAP is most impactful for GridWatch cities combining low household income AND high temperature sensitivity. Where SHAP drivers show min_temp_forecast and avg_temp_forecast as key risk factors, inefficient housing is likely the root cause — WAP's deep structural retrofits directly address this. WAP's income thresholds (200% FPL) are lower than ESA (250% FPL), so it targets the most economically vulnerable households. For cities where LIHEAP income limits exclude residents, WAP may still qualify those same households through categorical eligibility.
+
+Source: California Department of Community Services and Development (csd.ca.gov), 2025 WAP Income Eligibility Guidelines effective July 1, 2025. U.S. Department of Energy Weatherization Assistance Program (energy.gov). DOE national evaluation data.
