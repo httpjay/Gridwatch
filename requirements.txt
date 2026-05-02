@@ -7,7 +7,9 @@ shap
 sentence-transformers
 openai
 python-dotenv
-chromadb
+chromadb==0.4.24
+opentelemetry-api==1.23.0
+opentelemetry-sdk==1.23.0
 anthropic
 folium
 streamlit-folium
