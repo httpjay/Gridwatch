@@ -1,13 +1,13 @@
 streamlit
 pandas
-numpy
+numpy==1.26.4
 scikit-learn
 xgboost
 shap
 sentence-transformers
 openai
 python-dotenv
-chromadb==0.4.24
+chromadb==0.5.23
 opentelemetry-api==1.23.0
 opentelemetry-sdk==1.23.0
 anthropic
