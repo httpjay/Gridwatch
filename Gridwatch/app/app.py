@@ -4,7 +4,11 @@ import os
 
 import pandas as pd
 import streamlit as st
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+    load_dotenv()
+except ImportError:
+    pass
 from openai import OpenAI
 
 ROOT_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +29,6 @@ from policy_recommendation_from_shap import (
     extract_program_names,
 )
 from rag_pipeline import build_index, retrieve_context
-
-load_dotenv()
 
 st.set_page_config(page_title="GridWatch", layout="wide")
 
