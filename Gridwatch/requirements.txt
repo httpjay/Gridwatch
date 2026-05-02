@@ -1,13 +1,12 @@
 streamlit
 pandas
-numpy
+numpy==1.26.4
 scikit-learn
 xgboost
 shap
 sentence-transformers
 openai
 python-dotenv
-chromadb
 anthropic
 folium
 streamlit-folium
