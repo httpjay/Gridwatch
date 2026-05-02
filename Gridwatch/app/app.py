@@ -36,53 +36,165 @@ st.markdown("""
 <style>
 html, body, [class*="css"] { font-family: 'Inter', sans-serif; }
 
+/* ── Core card ─────────────────────────────────────────────────── */
 .gw-card {
-    background: white;
-    border: 1px solid #E2E8F0;
-    border-radius: 12px;
-    padding: 1.2rem 1.5rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    margin-bottom: 1rem;
+  background: var(--secondary-background-color);
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  margin-bottom: 1rem;
 }
 .gw-section-header {
-    border-left: 3px solid #1E40AF;
-    padding-left: 12px;
-    margin-bottom: 1.5rem;
-    margin-top: 1.5rem;
+  border-left: 3px solid #3B82F6;
+  padding-left: 12px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 }
+
+/* ── Risk badges ───────────────────────────────────────────────── */
 .gw-badge-high {
-    background: #FEF2F2; color: #DC2626; border: 1px solid #FECACA;
-    padding: 4px 12px; border-radius: 20px; font-weight: 600;
-    font-size: 0.85rem; display: inline-block;
+  background: rgba(220,38,38,0.12); color: #EF4444;
+  border: 1px solid rgba(220,38,38,0.3);
+  padding: 4px 12px; border-radius: 20px; font-weight: 600;
+  font-size: 0.85rem; display: inline-block;
 }
 .gw-badge-low {
-    background: #F0FDF4; color: #16A34A; border: 1px solid #BBF7D0;
-    padding: 4px 12px; border-radius: 20px; font-weight: 600;
-    font-size: 0.85rem; display: inline-block;
+  background: rgba(22,163,74,0.12); color: #22C55E;
+  border: 1px solid rgba(22,163,74,0.3);
+  padding: 4px 12px; border-radius: 20px; font-weight: 600;
+  font-size: 0.85rem; display: inline-block;
 }
+
+/* ── Stat cards ────────────────────────────────────────────────── */
 .gw-stat-card {
-    background: white; border: 1px solid #E2E8F0; border-radius: 12px;
-    padding: 1rem 1.2rem; text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  background: var(--secondary-background-color);
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 12px;
+  padding: 1rem 1.2rem; text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 }
 .gw-stat-label {
-    font-size: 0.72rem; font-weight: 500; color: #64748B;
-    text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;
+  font-size: 0.72rem; font-weight: 500; color: var(--text-color); opacity: 0.6;
+  text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.4rem;
 }
-.gw-stat-value { font-size: 1.8rem; font-weight: 700; color: #0F172A; line-height: 1.2; }
-.gw-stat-sub { font-size: 0.78rem; color: #94A3B8; margin-top: 0.3rem; }
+.gw-stat-value { font-size: 1.8rem; font-weight: 700; color: var(--text-color); line-height: 1.2; }
+.gw-stat-sub { font-size: 0.78rem; color: var(--text-color); opacity: 0.5; margin-top: 0.3rem; }
+
+/* ── Policy boxes ──────────────────────────────────────────────── */
 .gw-policy-immediate {
-    background: #FFF7ED; border-left: 4px solid #F59E0B;
-    border-radius: 0 12px 12px 0; padding: 1.2rem 1.5rem;
+  background: rgba(245,158,11,0.1); border-left: 4px solid #F59E0B;
+  border-radius: 0 12px 12px 0; padding: 1.2rem 1.5rem;
 }
 .gw-policy-medium {
-    background: #EFF6FF; border-left: 4px solid #3B82F6;
-    border-radius: 0 12px 12px 0; padding: 1.2rem 1.5rem;
+  background: rgba(59,130,246,0.1); border-left: 4px solid #3B82F6;
+  border-radius: 0 12px 12px 0; padding: 1.2rem 1.5rem;
 }
 .gw-policy-gaps {
-    background: #F5F3FF; border-left: 4px solid #8B5CF6;
-    border-radius: 0 12px 12px 0; padding: 1.2rem 1.5rem;
+  background: rgba(139,92,246,0.1); border-left: 4px solid #8B5CF6;
+  border-radius: 0 12px 12px 0; padding: 1.2rem 1.5rem;
 }
+
+/* ── Landing page ──────────────────────────────────────────────── */
+.gw-hero { text-align: center; padding: 3rem 1rem 1.5rem; }
+.gw-hero h1 {
+  font-size: 2.5rem; font-weight: 700; letter-spacing: -0.5px; margin: 0;
+  color: var(--text-color);
+}
+.gw-hero p {
+  font-size: 1.1rem; font-weight: 400; margin: 0.5rem 0 1.5rem;
+  color: var(--text-color); opacity: 0.65;
+}
+.gw-landing-card {
+  background: var(--secondary-background-color);
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 16px; padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* ── Alert / info boxes ────────────────────────────────────────── */
+.gw-alert-success {
+  background: rgba(22,163,74,0.1);
+  border: 1px solid rgba(22,163,74,0.3);
+  border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;
+}
+.gw-alert-info {
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.3);
+  border-radius: 8px; padding: 16px 20px; margin-bottom: 16px;
+}
+.gw-savings-box {
+  background: rgba(22,163,74,0.08);
+  border-radius: 6px; padding: 12px 16px; margin-bottom: 16px;
+}
+
+/* ── City snapshot grid ────────────────────────────────────────── */
+.gw-snapshot-grid { display: flex; gap: 12px; margin: 1rem 0; flex-wrap: wrap; }
+.gw-snapshot-card {
+  flex: 1; min-width: 130px;
+  background: var(--secondary-background-color);
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 12px; padding: 1.2rem; text-align: center;
+}
+.gw-snap-label {
+  font-size: 0.7rem; font-weight: 500; color: var(--text-color); opacity: 0.6;
+  text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;
+}
+.gw-snap-sub { font-size: 0.75rem; color: var(--text-color); opacity: 0.5; margin-top: 0.3rem; }
+
+/* ── Researcher top bar ────────────────────────────────────────── */
+.gw-topbar {
+  background: var(--secondary-background-color);
+  border: 1px solid rgba(148,163,184,0.2);
+  padding: 0.75rem 2rem; margin-bottom: 16px;
+  font-size: 0.9rem; border-radius: 8px;
+}
+
+/* ── Program cards ─────────────────────────────────────────────── */
+.gw-program-card {
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 12px; padding: 20px 24px; margin-bottom: 20px;
+  background: var(--secondary-background-color);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ── Not-qualified card ────────────────────────────────────────── */
+.gw-not-qualified {
+  background: var(--secondary-background-color);
+  border: 1px solid rgba(148,163,184,0.2);
+  border-radius: 10px; padding: 20px 24px;
+  color: var(--text-color); line-height: 1.7;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* ── Forecast box ──────────────────────────────────────────────── */
+.gw-forecast-box {
+  background: rgba(59,130,246,0.1);
+  border: 1px solid rgba(59,130,246,0.25);
+  border-radius: 6px; padding: 12px 16px; margin-bottom: 12px;
+}
+
+/* ── Utility helpers ───────────────────────────────────────────── */
+.gw-text-muted { color: var(--text-color); opacity: 0.55; }
+.gw-footer { color: var(--text-color); opacity: 0.45; font-size: 0.8rem; margin-top: 2rem; }
+
+/* ── Mobile responsive ─────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .gw-hero h1 { font-size: 1.85rem; }
+  .gw-hero p  { font-size: 0.95rem; }
+  .gw-hero    { padding: 1.5rem 0.5rem 1rem; }
+  .gw-landing-card { padding: 1.25rem; }
+  .gw-card, .gw-program-card { padding: 0.9rem 1rem; }
+  .gw-stat-value { font-size: 1.4rem; }
+  .gw-snapshot-grid { flex-direction: column; }
+  .gw-snapshot-card { min-width: unset; }
+  .gw-topbar { padding: 0.6rem 1rem; }
+  /* Stack Streamlit columns vertically */
+  [data-testid="column"] { min-width: min(100%, 300px) !important; }
+}
+
+/* ── Streamlit overrides ────────────────────────────────────────── */
+[data-testid="stDataFrame"] { background: transparent !important; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -466,11 +578,9 @@ if st.session_state.user_mode is not None:
 # ═════════════════════════════════════════════════════════════════════════════
 if st.session_state.user_mode is None:
     st.markdown(
-        "<div style='text-align:center;padding:3rem 0 1.5rem;'>"
-        "<h1 style='font-size:2.5rem;font-weight:700;color:#0F172A;letter-spacing:-0.5px;margin:0;'>"
-        "GridWatch</h1>"
-        "<p style='font-size:1.1rem;color:#64748B;font-weight:400;margin:0.5rem 0 1.5rem;'>"
-        "Energy Affordability Intelligence for California</p>"
+        "<div class='gw-hero'>"
+        "<h1>GridWatch</h1>"
+        "<p>Energy Affordability Intelligence for California</p>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -481,11 +591,10 @@ if st.session_state.user_mode is None:
 
     with land_l:
         st.markdown(
-            "<div style='background:white;border:1px solid #E2E8F0;border-radius:16px;"
-            "padding:2rem;box-shadow:0 4px 6px rgba(0,0,0,0.05);'>"
+            "<div class='gw-landing-card'>"
             "<div style='font-size:2rem;margin-bottom:0.75rem;'>🏠</div>"
-            "<h3 style='color:#0F172A;font-weight:600;margin:0 0 0.5rem;'>I'm a Resident</h3>"
-            "<p style='color:#64748B;margin:0;font-size:0.95rem;'>"
+            "<h3 style='color:var(--text-color);font-weight:600;margin:0 0 0.5rem;'>I'm a Resident</h3>"
+            "<p style='color:var(--text-color);opacity:0.65;margin:0;font-size:0.95rem;'>"
             "Find out if you qualify for energy assistance programs in California</p>"
             "</div>",
             unsafe_allow_html=True,
@@ -498,11 +607,10 @@ if st.session_state.user_mode is None:
 
     with land_r:
         st.markdown(
-            "<div style='background:white;border:1px solid #E2E8F0;border-radius:16px;"
-            "padding:2rem;box-shadow:0 4px 6px rgba(0,0,0,0.05);'>"
+            "<div class='gw-landing-card'>"
             "<div style='font-size:2rem;margin-bottom:0.75rem;'>📊</div>"
-            "<h3 style='color:#0F172A;font-weight:600;margin:0 0 0.5rem;'>I'm a City Official or Researcher</h3>"
-            "<p style='color:#64748B;margin:0;font-size:0.95rem;'>"
+            "<h3 style='color:var(--text-color);font-weight:600;margin:0 0 0.5rem;'>I'm a City Official or Researcher</h3>"
+            "<p style='color:var(--text-color);opacity:0.65;margin:0;font-size:0.95rem;'>"
             "Explore city-level energy risk data and policy recommendations</p>"
             "</div>",
             unsafe_allow_html=True,
@@ -513,7 +621,7 @@ if st.session_state.user_mode is None:
             st.rerun()
 
     st.markdown(
-        "<p style='text-align:center;color:#94A3B8;font-size:0.8rem;margin-top:3rem;'>"
+        "<p class='gw-footer' style='text-align:center;margin-top:3rem;'>"
         "GridWatch is a research tool. Information is provided for guidance only.</p>",
         unsafe_allow_html=True,
     )
@@ -534,8 +642,8 @@ elif st.session_state.user_mode == "resident":
     # ── STEP 1: Input form ────────────────────────────────────────────────────
     if step == 1:
         st.markdown(
-            "<h2 style='margin-bottom:0;color:#0F172A;'>Find Your Energy Assistance</h2>"
-            "<p style='color:#64748B;margin-top:4px;'>Answer 3 quick questions — takes less than 1 minute. "
+            "<h2 style='margin-bottom:0;color:var(--text-color);'>Find Your Energy Assistance</h2>"
+            "<p style='color:var(--text-color);opacity:0.65;margin-top:4px;'>Answer 3 quick questions — takes less than 1 minute. "
             "We do not store or share your information.</p>",
             unsafe_allow_html=True,
         )
@@ -582,7 +690,7 @@ elif st.session_state.user_mode == "resident":
                 st.rerun()
 
         st.markdown(
-            f"<p style='color:#94A3B8;font-size:0.8rem;margin-top:2rem;'>{_RESIDENT_FOOTER}</p>",
+            f"<p class='gw-footer'>{_RESIDENT_FOOTER}</p>",
             unsafe_allow_html=True,
         )
 
@@ -598,7 +706,7 @@ elif st.session_state.user_mode == "resident":
 
         qualified = get_resident_eligible_programs(user_income, res_hh_size)
 
-        st.markdown(f"<h2 style='color:#0F172A;'>Your Results for {res_city_name}</h2>", unsafe_allow_html=True)
+        st.markdown(f"<h2 style='color:var(--text-color);'>Your Results for {res_city_name}</h2>", unsafe_allow_html=True)
 
         col_back, _ = st.columns([1, 5])
         with col_back:
@@ -611,15 +719,14 @@ elif st.session_state.user_mode == "resident":
         # ── Qualified path ────────────────────────────────────────────────────
         if qualified:
             st.markdown(
-                "<div style='background:#F0FDF4;border:1px solid #BBF7D0;border-radius:8px;"
-                "padding:16px 20px;margin-bottom:16px;'>"
-                f"<span style='font-size:1.1rem;color:#166534;'>Good news — based on your "
+                "<div class='gw-alert-success'>"
+                f"<span style='font-size:1.1rem;color:#22C55E;'>Good news — based on your "
                 f"information, you likely qualify for energy assistance programs in {res_city_name}.</span>"
                 "</div>",
                 unsafe_allow_html=True,
             )
             st.markdown(
-                "<p style='color:#64748B;font-size:0.82rem;margin-bottom:1.5rem;'>"
+                "<p style='color:var(--text-color);opacity:0.6;font-size:0.82rem;margin-bottom:1.5rem;'>"
                 "Eligibility shown is an estimate based on income ranges. "
                 "Final eligibility is confirmed by program administrators.</p>",
                 unsafe_allow_html=True,
@@ -633,25 +740,25 @@ elif st.session_state.user_mode == "resident":
                 stype = info["savings_type"]
                 if stype == "flat":
                     savings_html = (
-                        "<p style='font-size:1.5rem;font-weight:700;color:#16A34A;margin:4px 0;'>"
+                        "<p style='font-size:1.5rem;font-weight:700;color:#22C55E;margin:4px 0;'>"
                         "Up to $1,000 one-time</p>"
-                        "<p style='color:#1E293B;margin:0;'>Applied directly to your utility account.</p>"
+                        "<p style='color:var(--text-color);margin:0;'>Applied directly to your utility account.</p>"
                     )
                 elif stype == "pct":
                     annual = energy_cost * info["savings_pct"]
                     monthly = annual / 12
                     savings_html = (
-                        f"<p style='font-size:1.5rem;font-weight:700;color:#16A34A;margin:4px 0;'>"
+                        f"<p style='font-size:1.5rem;font-weight:700;color:#22C55E;margin:4px 0;'>"
                         f"~${annual:,.0f}/year</p>"
-                        f"<p style='color:#1E293B;margin:0;'>That's roughly <strong>${monthly:,.0f}/month</strong> "
+                        f"<p style='color:var(--text-color);margin:0;'>That's roughly <strong>${monthly:,.0f}/month</strong> "
                         f"off your {info['bill_type']} bill.</p>"
                     )
                 else:  # pct_onetime
                     annual = energy_cost * info["savings_pct"]
                     savings_html = (
-                        f"<p style='font-size:1.5rem;font-weight:700;color:#16A34A;margin:4px 0;'>"
+                        f"<p style='font-size:1.5rem;font-weight:700;color:#22C55E;margin:4px 0;'>"
                         f"~${annual:,.0f}/year in reduced costs</p>"
-                        f"<p style='color:#1E293B;margin:0;'>Estimated savings after free home improvements "
+                        f"<p style='color:var(--text-color);margin:0;'>Estimated savings after free home improvements "
                         f"are completed.</p>"
                     )
 
@@ -661,30 +768,29 @@ elif st.session_state.user_mode == "resident":
                 )
 
                 st.markdown(
-                    f"<div style='border:1px solid #E2E8F0;border-radius:12px;padding:20px 24px;"
-                    f"margin-bottom:20px;background:white;box-shadow:0 1px 3px rgba(0,0,0,0.05);'>"
+                    f"<div class='gw-program-card'>"
 
-                    f"<h3 style='color:#1E40AF;margin-top:0;'>{info['full_name']}</h3>"
+                    f"<h3 style='color:#3B82F6;margin-top:0;'>{info['full_name']}</h3>"
 
-                    f"<p style='color:#64748B;font-size:0.78rem;text-transform:uppercase;"
+                    f"<p style='color:var(--text-color);opacity:0.55;font-size:0.78rem;text-transform:uppercase;"
                     f"letter-spacing:0.08em;margin:16px 0 4px;font-weight:500;'>What is this program?</p>"
-                    f"<p style='color:#1E293B;line-height:1.6;margin:0 0 16px;'>{info['what']}</p>"
+                    f"<p style='color:var(--text-color);line-height:1.6;margin:0 0 16px;'>{info['what']}</p>"
 
-                    f"<p style='color:#64748B;font-size:0.78rem;text-transform:uppercase;"
+                    f"<p style='color:var(--text-color);opacity:0.55;font-size:0.78rem;text-transform:uppercase;"
                     f"letter-spacing:0.08em;margin:0 0 4px;font-weight:500;'>How much could you save?</p>"
-                    f"<div style='background:#F0FDF4;border-radius:6px;padding:12px 16px;margin-bottom:16px;'>"
-                    f"<p style='color:#64748B;margin:0 0 6px;font-size:0.9rem;'>"
+                    f"<div class='gw-savings-box'>"
+                    f"<p style='color:var(--text-color);opacity:0.7;margin:0 0 6px;font-size:0.9rem;'>"
                     f"Based on {res_city_name}'s average annual energy cost of ${energy_cost:,.0f}:</p>"
                     f"{savings_html}"
                     f"</div>"
 
-                    f"<p style='color:#64748B;font-size:0.78rem;text-transform:uppercase;"
+                    f"<p style='color:var(--text-color);opacity:0.55;font-size:0.78rem;text-transform:uppercase;"
                     f"letter-spacing:0.08em;margin:0 0 4px;font-weight:500;'>Is this program trustworthy?</p>"
-                    f"<p style='color:#1E293B;line-height:1.6;margin:0 0 16px;'>{info['trust']}</p>"
+                    f"<p style='color:var(--text-color);line-height:1.6;margin:0 0 16px;'>{info['trust']}</p>"
 
-                    f"<p style='color:#64748B;font-size:0.78rem;text-transform:uppercase;"
+                    f"<p style='color:var(--text-color);opacity:0.55;font-size:0.78rem;text-transform:uppercase;"
                     f"letter-spacing:0.08em;margin:0 0 8px;font-weight:500;'>How to apply — step by step</p>"
-                    f"<ol style='color:#1E293B;line-height:1.6;padding-left:1.2rem;margin:0;'>"
+                    f"<ol style='color:var(--text-color);line-height:1.6;padding-left:1.2rem;margin:0;'>"
                     f"{steps_html}</ol>"
 
                     f"</div>",
@@ -735,17 +841,15 @@ elif st.session_state.user_mode == "resident":
         # ── Not qualified path ────────────────────────────────────────────────
         else:
             st.markdown(
-                "<div style='background:#EFF6FF;border:1px solid #BFDBFE;border-radius:8px;"
-                "padding:16px 20px;margin-bottom:16px;'>"
-                "<span style='font-size:1.05rem;color:#1D4ED8;'>"
+                "<div class='gw-alert-info'>"
+                "<span style='font-size:1.05rem;color:#3B82F6;'>"
                 "Based on your income, you are currently above the eligibility threshold for "
                 "most California energy assistance programs.</span>"
                 "</div>",
                 unsafe_allow_html=True,
             )
             st.markdown(
-                "<div style='border:1px solid #E2E8F0;border-radius:10px;padding:20px 24px;"
-                "background:white;color:#1E293B;line-height:1.7;box-shadow:0 1px 3px rgba(0,0,0,0.05);'>"
+                "<div class='gw-not-qualified'>"
                 "<p>This means your household income is considered stable enough that you are not "
                 "prioritized for subsidized assistance — which is a good thing.</p>"
                 "<p>However, you still have options:</p>"
@@ -760,7 +864,7 @@ elif st.session_state.user_mode == "resident":
                 "and check again anytime.</p>"
                 "<p><strong>4. REACH Program</strong> — Some utility companies offer the REACH program for "
                 "customers facing temporary hardship regardless of income. Ask your utility if they offer it.</p>"
-                "<p style='color:#64748B;font-size:0.85rem;margin-top:16px;margin-bottom:0;'>"
+                "<p style='color:var(--text-color);opacity:0.55;font-size:0.85rem;margin-top:16px;margin-bottom:0;'>"
                 "GridWatch does not store your information. Your answers are used only to generate this "
                 "result and are discarded when you close this page.</p>"
                 "</div>",
@@ -768,7 +872,7 @@ elif st.session_state.user_mode == "resident":
             )
 
         st.markdown(
-            f"<p style='color:#94A3B8;font-size:0.8rem;margin-top:2rem;'>{_RESIDENT_FOOTER}</p>",
+            f"<p class='gw-footer'>{_RESIDENT_FOOTER}</p>",
             unsafe_allow_html=True,
         )
 

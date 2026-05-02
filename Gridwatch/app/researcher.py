@@ -354,17 +354,17 @@ def _weekly_summaries(forecast_data):
 # ══════════════════════════════════════════════════════════════════════════════
 def _show_coverage_overview(data_df):
     st.markdown(
-        "<h2 style='margin-bottom:2px;color:#0F172A;'>California Energy Risk Overview</h2>"
-        "<p style='color:#64748B;margin-top:0;'>Exploring energy affordability risk across 50 California cities</p>",
+        "<h2 style='margin-bottom:2px;color:var(--text-color);'>California Energy Risk Overview</h2>"
+        "<p style='color:var(--text-color);opacity:0.65;margin-top:0;'>Exploring energy affordability risk across 50 California cities</p>",
         unsafe_allow_html=True,
     )
 
     n_high = int((data_df["risk_label"] == 1).sum())
     n_low  = int((data_df["risk_label"] == 0).sum())
     st.markdown(
-        f"<div style='margin-bottom:16px;font-size:1.05rem;color:#1E293B;'>"
-        f"🔴 <strong style='color:#DC2626;'>{n_high} High Risk</strong> &nbsp;&nbsp; "
-        f"🟢 <strong style='color:#16A34A;'>{n_low} Low Risk</strong>"
+        f"<div style='margin-bottom:16px;font-size:1.05rem;color:var(--text-color);'>"
+        f"🔴 <strong style='color:#EF4444;'>{n_high} High Risk</strong> &nbsp;&nbsp; "
+        f"🟢 <strong style='color:#22C55E;'>{n_low} Low Risk</strong>"
         f"</div>",
         unsafe_allow_html=True,
     )
@@ -453,7 +453,7 @@ def _show_coverage_overview(data_df):
                         _select_city(clicked_city)
 
     st.markdown(
-        f"<p style='color:#94A3B8;font-size:0.8rem;margin-top:1rem;'>"
+        f"<p class='gw-footer' style='margin-top:1rem;'>"
         f"Data last updated: {datetime.now().strftime('%B %d, %Y')}</p>",
         unsafe_allow_html=True,
     )
@@ -527,127 +527,57 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
         st.rerun()
 
     st.markdown(
-        f"<h2 style='margin-bottom:4px;color:#0F172A;'>{city_name} — Energy Risk Dashboard</h2>",
+        f"<h2 style='margin-bottom:4px;color:var(--text-color);'>{city_name} — Energy Risk Dashboard</h2>",
         unsafe_allow_html=True,
     )
     st.divider()
 
     # ── Section 1: City Snapshot ──────────────────────────────────────────────
     st.markdown(
-        "<div style='border-left:3px solid #1E40AF;padding-left:12px;margin-bottom:1rem;'>"
-        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:#1E293B;'>City Snapshot</h2>"
-        f"<p style='margin:0;font-size:0.85rem;color:#64748B;'>Key metrics for {city_name}</p>"
+        "<div style='border-left:3px solid #3B82F6;padding-left:12px;margin-bottom:1rem;'>"
+        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:var(--text-color);'>City Snapshot</h2>"
+        f"<p style='margin:0;font-size:0.85rem;color:var(--text-color);opacity:0.6;'>Key metrics for {city_name}</p>"
         "</div>",
         unsafe_allow_html=True,
     )
 
-    burden_color = "#4ADE80" if burden <= 3 else "#F87171"
-    risk_bg = "#14532D" if "LOW" in risk_txt else "#1A0000"
-    risk_border = "#22C55E" if "LOW" in risk_txt else "#DC2626"
-    risk_color = "#4ADE80" if "LOW" in risk_txt else "#F87171"
+    burden_color = "#22C55E" if burden <= 3 else "#F87171"
+    risk_border  = "#22C55E" if "LOW" in risk_txt else "#EF4444"
+    risk_color   = "#22C55E" if "LOW" in risk_txt else "#F87171"
+    risk_bg      = "rgba(22,163,74,0.12)" if "LOW" in risk_txt else "rgba(220,38,38,0.12)"
     temp_display = f"{min_temp:.0f}" if min_temp is not None else "N/A"
 
     st.markdown(f"""
-<div style="display: flex; gap: 12px; margin: 1rem 0;">
+<div class="gw-snapshot-grid">
 
-  <div style="flex:1; background:#1E293B;
-              border:1px solid #334155;
-              border-radius:12px; padding:1.2rem;
-              text-align:center;">
-    <div style="font-size:0.7rem; font-weight:500;
-                color:#94A3B8; text-transform:uppercase;
-                letter-spacing:0.08em;
-                margin-bottom:0.5rem;">
-      Energy Burden
-    </div>
-    <div style="font-size:2rem; font-weight:700;
-                color:{burden_color};">
-      {burden:.1f}%
-    </div>
-    <div style="font-size:0.75rem; color:#64748B;
-                margin-top:0.3rem;">
-      % of income on energy
-    </div>
+  <div class="gw-snapshot-card">
+    <div class="gw-snap-label">Energy Burden</div>
+    <div style="font-size:2rem;font-weight:700;color:{burden_color};">{burden:.1f}%</div>
+    <div class="gw-snap-sub">% of income on energy</div>
   </div>
 
-  <div style="flex:1; background:#1E293B;
-              border:1px solid #334155;
-              border-radius:12px; padding:1.2rem;
-              text-align:center;">
-    <div style="font-size:0.7rem; font-weight:500;
-                color:#94A3B8; text-transform:uppercase;
-                letter-spacing:0.08em;
-                margin-bottom:0.5rem;">
-      Avg Household Income
-    </div>
-    <div style="font-size:2rem; font-weight:700;
-                color:#38BDF8;">
-      ${income:,.0f}
-    </div>
-    <div style="font-size:0.75rem; color:#64748B;
-                margin-top:0.3rem;">
-      Median annual income
-    </div>
+  <div class="gw-snapshot-card">
+    <div class="gw-snap-label">Avg Household Income</div>
+    <div style="font-size:2rem;font-weight:700;color:#38BDF8;">${income:,.0f}</div>
+    <div class="gw-snap-sub">Median annual income</div>
   </div>
 
-  <div style="flex:1; background:#1E293B;
-              border:1px solid #334155;
-              border-radius:12px; padding:1.2rem;
-              text-align:center;">
-    <div style="font-size:0.7rem; font-weight:500;
-                color:#94A3B8; text-transform:uppercase;
-                letter-spacing:0.08em;
-                margin-bottom:0.5rem;">
-      Avg Energy Cost
-    </div>
-    <div style="font-size:2rem; font-weight:700;
-                color:#FBBF24;">
-      ${energy_cost:,.0f}
-    </div>
-    <div style="font-size:0.75rem; color:#64748B;
-                margin-top:0.3rem;">
-      Yearly expenditure
-    </div>
+  <div class="gw-snapshot-card">
+    <div class="gw-snap-label">Avg Energy Cost</div>
+    <div style="font-size:2rem;font-weight:700;color:#FBBF24;">${energy_cost:,.0f}</div>
+    <div class="gw-snap-sub">Yearly expenditure</div>
   </div>
 
-  <div style="flex:1; background:{risk_bg};
-              border:2px solid {risk_border};
-              border-radius:12px; padding:1.2rem;
-              text-align:center;">
-    <div style="font-size:0.7rem; font-weight:500;
-                color:#94A3B8; text-transform:uppercase;
-                letter-spacing:0.08em;
-                margin-bottom:0.5rem;">
-      Risk Level
-    </div>
-    <div style="font-size:1.6rem; font-weight:700;
-                color:{risk_color};">
-      {risk_txt}
-    </div>
-    <div style="font-size:0.75rem; color:#64748B;
-                margin-top:0.3rem;">
-      ML model prediction
-    </div>
+  <div class="gw-snapshot-card" style="background:{risk_bg};border:2px solid {risk_border};">
+    <div class="gw-snap-label">Risk Level</div>
+    <div style="font-size:1.6rem;font-weight:700;color:{risk_color};">{risk_txt}</div>
+    <div class="gw-snap-sub">ML model prediction</div>
   </div>
 
-  <div style="flex:1; background:#1E293B;
-              border:1px solid #334155;
-              border-radius:12px; padding:1.2rem;
-              text-align:center;">
-    <div style="font-size:0.7rem; font-weight:500;
-                color:#94A3B8; text-transform:uppercase;
-                letter-spacing:0.08em;
-                margin-bottom:0.5rem;">
-      Min Temp Forecast
-    </div>
-    <div style="font-size:2rem; font-weight:700;
-                color:#C084FC;">
-      {temp_display}°F
-    </div>
-    <div style="font-size:0.75rem; color:#64748B;
-                margin-top:0.3rem;">
-      Projected minimum
-    </div>
+  <div class="gw-snapshot-card">
+    <div class="gw-snap-label">Min Temp Forecast</div>
+    <div style="font-size:2rem;font-weight:700;color:#C084FC;">{temp_display}°F</div>
+    <div class="gw-snap-sub">Projected minimum</div>
   </div>
 
 </div>
@@ -657,9 +587,9 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
 
     # ── Section 2: Risk Analysis ──────────────────────────────────────────────
     st.markdown(
-        "<div style='border-left:3px solid #1E40AF;padding-left:12px;margin-bottom:1rem;'>"
-        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:#1E293B;'>Risk Analysis</h2>"
-        "<p style='margin:0;font-size:0.85rem;color:#64748B;'>AI-generated explanation of energy risk factors</p>"
+        "<div style='border-left:3px solid #3B82F6;padding-left:12px;margin-bottom:1rem;'>"
+        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:var(--text-color);'>Risk Analysis</h2>"
+        "<p style='margin:0;font-size:0.85rem;color:var(--text-color);opacity:0.6;'>AI-generated explanation of energy risk factors</p>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -680,9 +610,9 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
 
     # ── Section 3: Active Assistance Programs ─────────────────────────────────
     st.markdown(
-        "<div style='border-left:3px solid #1E40AF;padding-left:12px;margin-bottom:1rem;'>"
-        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:#1E293B;'>Active Assistance Programs</h2>"
-        "<p style='margin:0;font-size:0.85rem;color:#64748B;'>Programs available to residents based on city income data</p>"
+        "<div style='border-left:3px solid #3B82F6;padding-left:12px;margin-bottom:1rem;'>"
+        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:var(--text-color);'>Active Assistance Programs</h2>"
+        "<p style='margin:0;font-size:0.85rem;color:var(--text-color);opacity:0.6;'>Programs available to residents based on city income data</p>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -717,9 +647,9 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
 
     # ── Section 4: Seasonal Risk Pattern + Weather ────────────────────────────
     st.markdown(
-        "<div style='border-left:3px solid #1E40AF;padding-left:12px;margin-bottom:1rem;'>"
-        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:#1E293B;'>Seasonal Risk Pattern</h2>"
-        "<p style='margin:0;font-size:0.85rem;color:#64748B;'>Historical energy burden estimates — months of highest energy stress</p>"
+        "<div style='border-left:3px solid #3B82F6;padding-left:12px;margin-bottom:1rem;'>"
+        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:var(--text-color);'>Seasonal Risk Pattern</h2>"
+        "<p style='margin:0;font-size:0.85rem;color:var(--text-color);opacity:0.6;'>Historical energy burden estimates — months of highest energy stress</p>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -750,15 +680,15 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
             title=f"Monthly Energy Burden Pattern — {city_name}",
             xaxis_title="Month",
             yaxis_title="Energy Burden (%)",
-            plot_bgcolor="white",
-            paper_bgcolor="white",
-            font=dict(color="#1E293B", family="Inter"),
+            plot_bgcolor="rgba(0,0,0,0)",
+            paper_bgcolor="rgba(0,0,0,0)",
+            font=dict(color="#94A3B8", family="Inter"),
             showlegend=False,
             height=350,
             margin=dict(t=40, b=20),
         )
-        fig.update_xaxes(gridcolor="#F1F5F9", linecolor="#E2E8F0")
-        fig.update_yaxes(gridcolor="#F1F5F9", linecolor="#E2E8F0")
+        fig.update_xaxes(gridcolor="rgba(148,163,184,0.15)", linecolor="rgba(148,163,184,0.3)")
+        fig.update_yaxes(gridcolor="rgba(148,163,184,0.15)", linecolor="rgba(148,163,184,0.3)")
         st.plotly_chart(fig, use_container_width=True)
     else:
         st.error("Chart library not available. Run: pip install plotly")
@@ -786,8 +716,7 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
             forecast_summary = _ai_forecast_summary(client, model_name, city_name, burden, weekly)
 
         st.markdown(
-            f"<div style='background:#EFF6FF;border:1px solid #BFDBFE;border-radius:6px;"
-            f"padding:12px 16px;margin-bottom:12px;color:#1E293B;'>{forecast_summary}</div>",
+            f"<div class='gw-forecast-box' style='color:var(--text-color);'>{forecast_summary}</div>",
             unsafe_allow_html=True,
         )
 
@@ -829,9 +758,9 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
 
     # ── Section 5: Policy Recommendations ────────────────────────────────────
     st.markdown(
-        "<div style='border-left:3px solid #1E40AF;padding-left:12px;margin-bottom:1rem;'>"
-        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:#1E293B;'>Policy Recommendations</h2>"
-        "<p style='margin:0;font-size:0.85rem;color:#64748B;'>AI-generated suggestions for city officials and policymakers</p>"
+        "<div style='border-left:3px solid #3B82F6;padding-left:12px;margin-bottom:1rem;'>"
+        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:var(--text-color);'>Policy Recommendations</h2>"
+        "<p style='margin:0;font-size:0.85rem;color:var(--text-color);opacity:0.6;'>AI-generated suggestions for city officials and policymakers</p>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -843,27 +772,24 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
     col_imm, col_med = st.columns(2)
     with col_imm:
         st.markdown(
-            f"<div style='background:#FFF7ED;border-left:4px solid #F59E0B;"
-            f"border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;min-height:140px;'>"
-            f"<p style='color:#92400E;font-weight:700;margin:0 0 8px;'>Immediate Actions (Next 30 Days)</p>"
-            f"<p style='color:#1E293B;font-size:0.9em;line-height:1.7;white-space:pre-line;'>"
+            f"<div class='gw-policy-immediate' style='min-height:140px;'>"
+            f"<p style='color:#D97706;font-weight:700;margin:0 0 8px;'>Immediate Actions (Next 30 Days)</p>"
+            f"<p style='color:var(--text-color);font-size:0.9em;line-height:1.7;white-space:pre-line;'>"
             f"{recs.get('immediate','')}</p></div>",
             unsafe_allow_html=True,
         )
     with col_med:
         st.markdown(
-            f"<div style='background:#EFF6FF;border-left:4px solid #3B82F6;"
-            f"border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;min-height:140px;'>"
-            f"<p style='color:#1D4ED8;font-weight:700;margin:0 0 8px;'>Medium Term (Next 6 Months)</p>"
-            f"<p style='color:#1E293B;font-size:0.9em;line-height:1.7;white-space:pre-line;'>"
+            f"<div class='gw-policy-medium' style='min-height:140px;'>"
+            f"<p style='color:#3B82F6;font-weight:700;margin:0 0 8px;'>Medium Term (Next 6 Months)</p>"
+            f"<p style='color:var(--text-color);font-size:0.9em;line-height:1.7;white-space:pre-line;'>"
             f"{recs.get('medium_term','')}</p></div>",
             unsafe_allow_html=True,
         )
     st.markdown(
-        f"<div style='background:#F5F3FF;border-left:4px solid #8B5CF6;"
-        f"border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin-top:12px;'>"
-        f"<p style='color:#6D28D9;font-weight:700;margin:0 0 8px;'>Policy Gaps Identified</p>"
-        f"<p style='color:#1E293B;font-size:0.9em;line-height:1.7;white-space:pre-line;'>"
+        f"<div class='gw-policy-gaps' style='margin-top:12px;'>"
+        f"<p style='color:#8B5CF6;font-weight:700;margin:0 0 8px;'>Policy Gaps Identified</p>"
+        f"<p style='color:var(--text-color);font-size:0.9em;line-height:1.7;white-space:pre-line;'>"
         f"{recs.get('policy_gaps','')}</p></div>",
         unsafe_allow_html=True,
     )
@@ -872,9 +798,9 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
 
     # ── Section 6: Research Assistant Chat ───────────────────────────────────
     st.markdown(
-        "<div style='border-left:3px solid #1E40AF;padding-left:12px;margin-bottom:1rem;'>"
-        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:#1E293B;'>Research Assistant</h2>"
-        "<p style='margin:0;font-size:0.85rem;color:#64748B;'>Ask technical questions about this city's data, compare programs, or explore policy options</p>"
+        "<div style='border-left:3px solid #3B82F6;padding-left:12px;margin-bottom:1rem;'>"
+        "<h2 style='margin:0;font-size:1.25rem;font-weight:600;color:var(--text-color);'>Research Assistant</h2>"
+        "<p style='margin:0;font-size:0.85rem;color:var(--text-color);opacity:0.6;'>Ask technical questions about this city's data, compare programs, or explore policy options</p>"
         "</div>",
         unsafe_allow_html=True,
     )
@@ -945,7 +871,7 @@ def _show_city_dashboard(data_df, shap_df, client, model_name):
         st.session_state["r2_chat_messages"].append({"role": "assistant", "content": ans})
 
     st.markdown(
-        f"<p style='color:#94A3B8;font-size:0.8rem;margin-top:2rem;'>"
+        f"<p class='gw-footer' style='margin-top:2rem;'>"
         f"Data last updated: {datetime.now().strftime('%B %d, %Y')}</p>",
         unsafe_allow_html=True,
     )
@@ -966,16 +892,15 @@ def show_researcher_dashboard(data_df, shap_df, client, model_name):
 
     # Persistent top bar
     viewing_part = (
-        f'<span style="color:#CBD5E1;margin:0 4px;">|</span>'
-        f'<span style="color:#64748B;">Currently viewing: <strong>{city_label}</strong></span>'
+        f'<span style="color:var(--text-color);opacity:0.3;margin:0 4px;">|</span>'
+        f'<span style="color:var(--text-color);opacity:0.65;">Currently viewing: <strong>{city_label}</strong></span>'
         if city_label and screen == 2 else ""
     )
     st.markdown(
-        f"<div style='background:white;border:1px solid #E2E8F0;padding:0.75rem 2rem;"
-        f"margin-bottom:16px;font-size:0.9rem;border-radius:8px;'>"
-        f"<strong style='color:#1E40AF;font-size:1rem;'>GridWatch</strong>"
-        f"<span style='color:#CBD5E1;margin:0 8px;'>|</span>"
-        f"<span style='color:#64748B;'>Research Dashboard</span>"
+        f"<div class='gw-topbar'>"
+        f"<strong style='color:#3B82F6;font-size:1rem;'>GridWatch</strong>"
+        f"<span style='color:var(--text-color);opacity:0.3;margin:0 8px;'>|</span>"
+        f"<span style='color:var(--text-color);opacity:0.65;'>Research Dashboard</span>"
         f"{viewing_part}"
         f"</div>",
         unsafe_allow_html=True,
